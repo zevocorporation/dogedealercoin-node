@@ -5,23 +5,22 @@ import { Server } from "socket.io";
 import mongoose from "mongoose";
 import Web3 from "web3";
 import { URLS, address, abi } from "./constants.js";
-
-import { contract } from "./contract.js";
+import { setValues } from "./controllers.js";
 
 const app = express();
 
 const server = http.createServer(app);
-const io = new Server(server, {
-  cors: {
-    origin: "http://18.219.63.230:3000",
-    methods: ["GET", "POST"],
-  },
-});
+// const io = new Server(server, {
+//   cors: {
+//     origin: "http://18.219.63.230:3000",
+//     methods: ["GET", "POST"],
+//   },
+// });
 
 app.use(cors());
 
 const CONNECTION_URL =
-  "mongodb+srv://bscgamble:targetFIXED08@@cluster0.77pbx.mongodb.net/Dogedealer?retryWrites=true&w=majority";
+  "mongodb+srv://arunram:arunram@123@cluster0.ods1q.mongodb.net/Dogodealer?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
 
 const chainId = 4;
@@ -55,7 +54,7 @@ DogeDealer.events.ReferredBy({}, (err, res) => {
   }
 });
 
-DogeDealer.events.ReferralRewards({}, (err, res) => {
+DogeDealer.events.ReferralRewards({}, async (err, res) => {
   if (!err) {
     console.log({
       user: res.returnValues[0],
@@ -65,6 +64,15 @@ DogeDealer.events.ReferralRewards({}, (err, res) => {
       Weekly: res.returnValues[4],
       Monthly: res.returnValues[5],
     });
+    const data = {
+      user: res.returnValues[0],
+      sender: res.returnValues[1],
+      amount: res.returnValues[2],
+      Daily: res.returnValues[3],
+      Weekly: res.returnValues[4],
+      Monthly: res.returnValues[5],
+    };
+    setValues(data);
   }
 });
 
