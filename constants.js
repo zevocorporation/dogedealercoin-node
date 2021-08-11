@@ -1439,4 +1439,4 @@ const URLS = {
   4: "wss://rinkeby.infura.io/ws/v3/f2015366952f43d8a012c39f2b4c0490",
 };
 
-module.exports = { abi, address, URLS };
+export { abi, address, URLS };
