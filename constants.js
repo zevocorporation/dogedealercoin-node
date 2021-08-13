@@ -1,5 +1,4 @@
-const abi = [
-  { inputs: [], stateMutability: "nonpayable", type: "constructor" },
+export const abi = [
   {
     anonymous: false,
     inputs: [
@@ -29,20 +28,6 @@ const abi = [
     anonymous: false,
     inputs: [
       {
-        indexed: false,
-        internalType: "address",
-        name: "account",
-        type: "address",
-      },
-      { indexed: false, internalType: "bool", name: "convert", type: "bool" },
-    ],
-    name: "ConvertReferralRewards",
-    type: "event",
-  },
-  {
-    anonymous: false,
-    inputs: [
-      {
         indexed: true,
         internalType: "address",
         name: "account",
@@ -61,7 +46,12 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: false, internalType: "bool", name: "enabled", type: "bool" },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "enabled",
+        type: "bool",
+      },
     ],
     name: "EnableStaking",
     type: "event",
@@ -69,7 +59,12 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: false, internalType: "bool", name: "enabled", type: "bool" },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "enabled",
+        type: "bool",
+      },
     ],
     name: "EnableSwapAndLiquify",
     type: "event",
@@ -190,8 +185,18 @@ const abi = [
         name: "lastProcessedIndex",
         type: "uint256",
       },
-      { indexed: true, internalType: "bool", name: "automatic", type: "bool" },
-      { indexed: false, internalType: "uint256", name: "gas", type: "uint256" },
+      {
+        indexed: true,
+        internalType: "bool",
+        name: "automatic",
+        type: "bool",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "gas",
+        type: "uint256",
+      },
       {
         indexed: true,
         internalType: "address",
@@ -205,8 +210,18 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: true, internalType: "address", name: "by", type: "address" },
-      { indexed: true, internalType: "address", name: "to", type: "address" },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "by",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
       {
         indexed: true,
         internalType: "uint256",
@@ -237,7 +252,6 @@ const abi = [
         name: "treePosition",
         type: "int256",
       },
-      { indexed: false, internalType: "bool", name: "converted", type: "bool" },
     ],
     name: "ReferralRewards",
     type: "event",
@@ -245,7 +259,12 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: true, internalType: "address", name: "by", type: "address" },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "by",
+        type: "address",
+      },
       {
         indexed: true,
         internalType: "address",
@@ -280,16 +299,21 @@ const abi = [
       {
         indexed: false,
         internalType: "uint256",
-        name: "amount",
+        name: "dividends",
         type: "uint256",
       },
       {
         indexed: false,
         internalType: "uint256",
-        name: "opAmount",
+        name: "marketing",
         type: "uint256",
       },
-      { indexed: false, internalType: "bool", name: "success", type: "bool" },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "success",
+        type: "bool",
+      },
     ],
     name: "SendDividends",
     type: "event",
@@ -297,8 +321,18 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: true, internalType: "address", name: "pair", type: "address" },
-      { indexed: true, internalType: "bool", name: "value", type: "bool" },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "pair",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "bool",
+        name: "value",
+        type: "bool",
+      },
     ],
     name: "SetAutomatedMarketMakerPair",
     type: "event",
@@ -341,12 +375,27 @@ const abi = [
     name: "SwapAndLiquify",
     type: "event",
   },
-  { anonymous: false, inputs: [], name: "TradingEnabled", type: "event" },
+  {
+    anonymous: false,
+    inputs: [],
+    name: "TradingEnabled",
+    type: "event",
+  },
   {
     anonymous: false,
     inputs: [
-      { indexed: true, internalType: "address", name: "from", type: "address" },
-      { indexed: true, internalType: "address", name: "to", type: "address" },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "from",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "to",
+        type: "address",
+      },
       {
         indexed: false,
         internalType: "uint256",
@@ -366,7 +415,12 @@ const abi = [
         name: "token",
         type: "address",
       },
-      { indexed: false, internalType: "bool", name: "allow", type: "bool" },
+      {
+        indexed: false,
+        internalType: "bool",
+        name: "allow",
+        type: "bool",
+      },
     ],
     name: "UpdateAllowTokens",
     type: "event",
@@ -393,7 +447,12 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: false, internalType: "uint256", name: "dev", type: "uint256" },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "dev",
+        type: "uint256",
+      },
       {
         indexed: false,
         internalType: "uint256",
@@ -425,7 +484,12 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: false, internalType: "uint256", name: "dev", type: "uint256" },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "dev",
+        type: "uint256",
+      },
       {
         indexed: false,
         internalType: "uint256",
@@ -470,8 +534,18 @@ const abi = [
   {
     anonymous: false,
     inputs: [
-      { indexed: false, internalType: "int256", name: "index", type: "int256" },
-      { indexed: false, internalType: "uint256", name: "fee", type: "uint256" },
+      {
+        indexed: false,
+        internalType: "int256",
+        name: "index",
+        type: "int256",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "fee",
+        type: "uint256",
+      },
     ],
     name: "UpdateReferralTreeFees",
     type: "event",
@@ -515,72 +589,27 @@ const abi = [
     type: "event",
   },
   {
-    inputs: [],
-    name: "BNBRewardsBuyFee",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "BNBRewardsBuyFeeReferred",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "BNBRewardsSellFee",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "BNBRewardsSellFeeReferred",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [
-      { internalType: "address", name: "owner", type: "address" },
-      { internalType: "address", name: "spender", type: "address" },
-    ],
-    name: "allowance",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      { internalType: "address", name: "spender", type: "address" },
-      { internalType: "uint256", name: "amount", type: "uint256" },
+      {
+        internalType: "address",
+        name: "spender",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
     ],
     name: "approve",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "automatedMarketMakerPairs",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "balanceOf",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "buyAmount",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
     type: "function",
   },
   {
@@ -591,86 +620,50 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "convertReferralRewards",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "dailyTimer",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "decimals",
-    outputs: [{ internalType: "uint8", name: "", type: "uint8" }],
-    stateMutability: "view",
+    inputs: [
+      {
+        internalType: "address",
+        name: "spender",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "subtractedValue",
+        type: "uint256",
+      },
+    ],
+    name: "decreaseAllowance",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "address", name: "spender", type: "address" },
-      { internalType: "uint256", name: "subtractedValue", type: "uint256" },
-    ],
-    name: "decreaseAllowance",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "devFees",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "devFeesReferred",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "dividendTokenBalanceOf",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "dividendTracker",
-    outputs: [
       {
-        internalType: "contract DogeDealerDividendTracker",
-        name: "",
-        type: "address",
+        internalType: "bool",
+        name: "enable",
+        type: "bool",
       },
     ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "bool", name: "enabled", type: "bool" }],
-    name: "enableConvertReferralRewards",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "bool", name: "enable", type: "bool" }],
     name: "enableStaking",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "bool", name: "enabled", type: "bool" }],
+    inputs: [
+      {
+        internalType: "bool",
+        name: "enabled",
+        type: "bool",
+      },
+    ],
     name: "enableSwapAndLiquify",
     outputs: [],
     stateMutability: "nonpayable",
@@ -685,8 +678,16 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address", name: "account", type: "address" },
-      { internalType: "bool", name: "excluded", type: "bool" },
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        internalType: "bool",
+        name: "excluded",
+        type: "bool",
+      },
     ],
     name: "excludeFromFees",
     outputs: [],
@@ -694,15 +695,24 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [],
-    name: "forceStartTradingAt",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "uint256", name: "tokens", type: "uint256" }],
-    name: "forceSwapAndSendDividends",
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "dividends",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "marketing",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "liquidity",
+        type: "uint256",
+      },
+    ],
+    name: "forceSwapAndSendDividendsAndMarketingFundsAndLiquidity",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
@@ -711,337 +721,96 @@ const abi = [
     inputs: [],
     name: "forceUpdateReferralLeaderboards",
     outputs: [
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
     ],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [],
-    name: "gasForProcessing",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "getAccountDividendsInfo",
-    outputs: [
-      { internalType: "address", name: "", type: "address" },
-      { internalType: "int256", name: "", type: "int256" },
-      { internalType: "int256", name: "", type: "int256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "uint256", name: "index", type: "uint256" }],
-    name: "getAccountDividendsInfoAtIndex",
-    outputs: [
-      { internalType: "address", name: "", type: "address" },
-      { internalType: "int256", name: "", type: "int256" },
-      { internalType: "int256", name: "", type: "int256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "token", type: "address" }],
-    name: "getAllowTokens",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "getConvertRefferalRewards",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getETHBalance",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getIterations",
-    outputs: [
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getLastProcessedIndex",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getNativeBalance",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getNumberOfDividendTokenHolders",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "getPayoutToken",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getReferralLeaderboardTimers",
-    outputs: [
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [
-      { internalType: "address", name: "account", type: "address" },
-      { internalType: "int256", name: "index", type: "int256" },
-    ],
-    name: "getReferralTree",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "int256", name: "index", type: "int256" }],
-    name: "getReferralTreeFees",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getReferralTreeFeesLength",
-    outputs: [{ internalType: "int256", name: "", type: "int256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "getReferralTreeLength",
-    outputs: [{ internalType: "int256", name: "", type: "int256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getReferrer",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "getReferrerOf",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "getStakingInfo",
-    outputs: [
-      { internalType: "uint256", name: "", type: "uint256" },
-      { internalType: "uint256", name: "", type: "uint256" },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "getTotalDividendsDistributed",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [
-      { internalType: "address", name: "spender", type: "address" },
-      { internalType: "uint256", name: "addedValue", type: "uint256" },
+      {
+        internalType: "address",
+        name: "spender",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "addedValue",
+        type: "uint256",
+      },
     ],
     name: "increaseAllowance",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "isExcludedFromAutoClaim",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "isExcludedFromFees",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "isPrivateSaleWallet",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "isReinvest",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "liquidityFee",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "liquidityFeeReferred",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "liquidityWallet",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "marketingAddress",
-    outputs: [{ internalType: "address payable", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "maxSellTransactionAmount",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "monthlyTimer",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "name",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "owner",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "privateSaleWallet",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "uint256", name: "gas", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "gas",
+        type: "uint256",
+      },
+    ],
     name: "processDividendTracker",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [],
-    name: "referralFee",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "int256", name: "", type: "int256" }],
-    name: "referralTreeFees",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [
-      { internalType: "address", name: "", type: "address" },
-      { internalType: "int256", name: "", type: "int256" },
+      {
+        internalType: "bool",
+        name: "allow",
+        type: "bool",
+      },
     ],
-    name: "referrerTree",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "sellAmount",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "bool", name: "allow", type: "bool" }],
     name: "setAllowAutoReinvest",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "bool", name: "allow", type: "bool" }],
+    inputs: [
+      {
+        internalType: "bool",
+        name: "allow",
+        type: "bool",
+      },
+    ],
     name: "setAllowCustomTokens",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "bool", name: "value", type: "bool" }],
+    inputs: [
+      {
+        internalType: "bool",
+        name: "value",
+        type: "bool",
+      },
+    ],
     name: "setAutoClaim",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1049,8 +818,16 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address", name: "pair", type: "address" },
-      { internalType: "bool", name: "value", type: "bool" },
+      {
+        internalType: "address",
+        name: "pair",
+        type: "address",
+      },
+      {
+        internalType: "bool",
+        name: "value",
+        type: "bool",
+      },
     ],
     name: "setAutomatedMarketMakerPair",
     outputs: [],
@@ -1058,14 +835,31 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "bool", name: "convert", type: "bool" }],
-    name: "setConvertReferralRewards",
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        internalType: "bool",
+        name: "status",
+        type: "bool",
+      },
+    ],
+    name: "setBlacklisted",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "bool", name: "value", type: "bool" }],
+    inputs: [
+      {
+        internalType: "bool",
+        name: "value",
+        type: "bool",
+      },
+    ],
     name: "setDividendsPaused",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1073,10 +867,26 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "uint256", name: "newIteration", type: "uint256" },
-      { internalType: "uint256", name: "newIterationDaily", type: "uint256" },
-      { internalType: "uint256", name: "newIterationWeekly", type: "uint256" },
-      { internalType: "uint256", name: "newIterationMonthly", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "newIteration",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "newIterationDaily",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "newIterationWeekly",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "newIterationMonthly",
+        type: "uint256",
+      },
     ],
     name: "setIterations",
     outputs: [],
@@ -1085,7 +895,11 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address payable", name: "newAddress", type: "address" },
+      {
+        internalType: "address payable",
+        name: "newAddress",
+        type: "address",
+      },
     ],
     name: "setMarketingAddress",
     outputs: [],
@@ -1093,7 +907,13 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "wallet", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "wallet",
+        type: "address",
+      },
+    ],
     name: "setPresaleWallet",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1101,19 +921,21 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address", name: "account", type: "address" },
-      { internalType: "bool", name: "status", type: "bool" },
-    ],
-    name: "setPrivateSaleWallet",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      { internalType: "uint256", name: "daily", type: "uint256" },
-      { internalType: "uint256", name: "weekly", type: "uint256" },
-      { internalType: "uint256", name: "monthly", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "daily",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "weekly",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "monthly",
+        type: "uint256",
+      },
     ],
     name: "setReferralLeaderboardTimers",
     outputs: [],
@@ -1122,9 +944,21 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address", name: "account", type: "address" },
-      { internalType: "int256", name: "index", type: "int256" },
-      { internalType: "address", name: "accountToInsert", type: "address" },
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        internalType: "int256",
+        name: "index",
+        type: "int256",
+      },
+      {
+        internalType: "address",
+        name: "accountToInsert",
+        type: "address",
+      },
     ],
     name: "setReferralTreeAtIndex",
     outputs: [],
@@ -1132,125 +966,124 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "int256", name: "length", type: "int256" }],
+    inputs: [
+      {
+        internalType: "int256",
+        name: "length",
+        type: "int256",
+      },
+    ],
     name: "setReferralTreeFeesLength",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "_referrer", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "_referrer",
+        type: "address",
+      },
+    ],
     name: "setReferrer",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "bool", name: "value", type: "bool" }],
+    inputs: [
+      {
+        internalType: "bool",
+        name: "value",
+        type: "bool",
+      },
+    ],
     name: "setReinvest",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "amount", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+    ],
     name: "setSwapTokensAmount",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "amount", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+    ],
     name: "setSwapTokensAmountMax",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "duration", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "duration",
+        type: "uint256",
+      },
+    ],
     name: "stake",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    name: "stakingAmounts",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "stakingBonus",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "address", name: "", type: "address" }],
-    name: "stakingUntilDate",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "swapAndLiquifyEnabled",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "swapTokensAtAmount",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "swapTokensAtAmountMax",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "symbol",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "totalSupply",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "tradingEnabled",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
     inputs: [
-      { internalType: "address", name: "recipient", type: "address" },
-      { internalType: "uint256", name: "amount", type: "uint256" },
+      {
+        internalType: "address",
+        name: "recipient",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
     ],
     name: "transfer",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [
-      { internalType: "address", name: "tokenAddress", type: "address" },
-      { internalType: "uint256", name: "amount", type: "uint256" },
-      { internalType: "address", name: "destination", type: "address" },
+      {
+        internalType: "address",
+        name: "tokenAddress",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+      {
+        internalType: "address",
+        name: "destination",
+        type: "address",
+      },
     ],
     name: "transferERC20Token",
     outputs: [],
@@ -1259,8 +1092,16 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address", name: "destination", type: "address" },
-      { internalType: "uint256", name: "bnb", type: "uint256" },
+      {
+        internalType: "address",
+        name: "destination",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "bnb",
+        type: "uint256",
+      },
     ],
     name: "transferETH",
     outputs: [],
@@ -1269,46 +1110,62 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address", name: "sender", type: "address" },
-      { internalType: "address", name: "recipient", type: "address" },
-      { internalType: "uint256", name: "amount", type: "uint256" },
+      {
+        internalType: "address",
+        name: "sender",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "recipient",
+        type: "address",
+      },
+      {
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
     ],
     name: "transferFrom",
-    outputs: [{ internalType: "bool", name: "", type: "bool" }],
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "newOwner", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
     name: "transferOwnership",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [],
-    name: "uniswapV2Pair",
-    outputs: [{ internalType: "address", name: "", type: "address" }],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "uniswapV2Router",
-    outputs: [
-      {
-        internalType: "contract IUniswapV2Router02",
-        name: "",
-        type: "address",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
+    stateMutability: "payable",
+    type: "receive",
   },
   {
     inputs: [
-      { internalType: "address", name: "token", type: "address" },
-      { internalType: "bool", name: "allow", type: "bool" },
+      {
+        internalType: "address",
+        name: "token",
+        type: "address",
+      },
+      {
+        internalType: "bool",
+        name: "allow",
+        type: "bool",
+      },
     ],
     name: "updateAllowTokens",
     outputs: [],
@@ -1316,7 +1173,13 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "newAddress", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "newAddress",
+        type: "address",
+      },
+    ],
     name: "updateDividendTracker",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1324,11 +1187,31 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "uint256", name: "dev", type: "uint256" },
-      { internalType: "uint256", name: "liquidity", type: "uint256" },
-      { internalType: "uint256", name: "BNBRewardsBuy", type: "uint256" },
-      { internalType: "uint256", name: "BNBRewardsSell", type: "uint256" },
-      { internalType: "uint256", name: "referral", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "dev",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "liquidity",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "BNBRewardsBuy",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "BNBRewardsSell",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "referral",
+        type: "uint256",
+      },
     ],
     name: "updateFees",
     outputs: [],
@@ -1337,8 +1220,16 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "uint256", name: "devReferred", type: "uint256" },
-      { internalType: "uint256", name: "liquidityReferred", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "devReferred",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "liquidityReferred",
+        type: "uint256",
+      },
       {
         internalType: "uint256",
         name: "BNBRewardsBuyReferred",
@@ -1356,7 +1247,13 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "newValue", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "newValue",
+        type: "uint256",
+      },
+    ],
     name: "updateGasForProcessing",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1364,7 +1261,11 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "address", name: "newLiquidityWallet", type: "address" },
+      {
+        internalType: "address",
+        name: "newLiquidityWallet",
+        type: "address",
+      },
     ],
     name: "updateLiquidityWallet",
     outputs: [],
@@ -1372,14 +1273,26 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "uint256", name: "newNum", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "newNum",
+        type: "uint256",
+      },
+    ],
     name: "updateMaxAmount",
     outputs: [],
     stateMutability: "nonpayable",
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "token", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "token",
+        type: "address",
+      },
+    ],
     name: "updatePayoutToken",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1387,8 +1300,16 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "int256", name: "index", type: "int256" },
-      { internalType: "uint256", name: "fee", type: "uint256" },
+      {
+        internalType: "int256",
+        name: "index",
+        type: "int256",
+      },
+      {
+        internalType: "uint256",
+        name: "fee",
+        type: "uint256",
+      },
     ],
     name: "updateReferralTreeFees",
     outputs: [],
@@ -1397,8 +1318,16 @@ const abi = [
   },
   {
     inputs: [
-      { internalType: "uint256", name: "duration", type: "uint256" },
-      { internalType: "uint256", name: "bonus", type: "uint256" },
+      {
+        internalType: "uint256",
+        name: "duration",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "bonus",
+        type: "uint256",
+      },
     ],
     name: "updateStakingAmounts",
     outputs: [],
@@ -1406,7 +1335,13 @@ const abi = [
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "newAddress", type: "address" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "newAddress",
+        type: "address",
+      },
+    ],
     name: "updateUniswapV2Router",
     outputs: [],
     stateMutability: "nonpayable",
@@ -1414,24 +1349,1062 @@ const abi = [
   },
   {
     inputs: [],
-    name: "weeklyTimer",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    stateMutability: "nonpayable",
+    type: "constructor",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "owner",
+        type: "address",
+      },
+      {
+        internalType: "address",
+        name: "spender",
+        type: "address",
+      },
+    ],
+    name: "allowance",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [{ internalType: "address", name: "account", type: "address" }],
-    name: "withdrawableDividendOf",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    name: "automatedMarketMakerPairs",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
     stateMutability: "view",
     type: "function",
   },
-  { stateMutability: "payable", type: "receive" },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "balanceOf",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "BNBRewardsBuyFee",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "BNBRewardsBuyFeeReferred",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "BNBRewardsSellFee",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "BNBRewardsSellFeeReferred",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "dailyTimer",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "decimals",
+    outputs: [
+      {
+        internalType: "uint8",
+        name: "",
+        type: "uint8",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "devFees",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "devFeesReferred",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "dividendTokenBalanceOf",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "dividendTracker",
+    outputs: [
+      {
+        internalType: "contract DogeDealerDividendTracker",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "gasForProcessing",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "getAccountDividendsInfo",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "index",
+        type: "uint256",
+      },
+    ],
+    name: "getAccountDividendsInfoAtIndex",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "token",
+        type: "address",
+      },
+    ],
+    name: "getAllowTokens",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getCountOfFeesToSwap",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getETHBalance",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getIterations",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getLastProcessedIndex",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getNativeBalance",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getNumberOfDividendTokenHolders",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "getPayoutToken",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getReferralLeaderboardTimers",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+      {
+        internalType: "int256",
+        name: "index",
+        type: "int256",
+      },
+    ],
+    name: "getReferralTree",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "int256",
+        name: "index",
+        type: "int256",
+      },
+    ],
+    name: "getReferralTreeFees",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getReferralTreeFeesLength",
+    outputs: [
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "getReferralTreeLength",
+    outputs: [
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getReferrer",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "getReferrerOf",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "getStakingInfo",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "getTotalDividendsDistributed",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "isBlacklisted",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "isExcludedFromAutoClaim",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "isExcludedFromFees",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "isReinvest",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "liquidityFee",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "liquidityFeeReferred",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "liquidityWallet",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "marketingAddress",
+    outputs: [
+      {
+        internalType: "address payable",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "maxSellTransactionAmount",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "monthlyTimer",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "name",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "referralFee",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+    ],
+    name: "referralTreeFees",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+      {
+        internalType: "int256",
+        name: "",
+        type: "int256",
+      },
+    ],
+    name: "referrerTree",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    name: "stakingAmounts",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    name: "stakingBonus",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    name: "stakingUntilDate",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "swapAndLiquifyEnabled",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "swapTokensAtAmount",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "swapTokensAtAmountMax",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "symbol",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "totalReferralsDistributed",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "totalSupply",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "tradingEnabled",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "uniswapV2Pair",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "uniswapV2Router",
+    outputs: [
+      {
+        internalType: "contract IUniswapV2Router02",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "weeklyTimer",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "account",
+        type: "address",
+      },
+    ],
+    name: "withdrawableDividendOf",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
 ];
-
 const address = {
-  56: "0xFbB14437F92691ddCa50F8c6906c67C1CD9098D4",
-  4: "0xCb2458a3De4a5b704410C595a86588857d32c19A",
+  56: "0xccCa79107205433e743B0FCdcA8206171E07f059",
+  4: "0xFC8a93793D49E49AE02d96F2560c3F8680CF768A",
 };
 
 const URLS = {
@@ -1439,4 +2412,4 @@ const URLS = {
   4: "wss://rinkeby.infura.io/ws/v3/f2015366952f43d8a012c39f2b4c0490",
 };
 
-export { abi, address, URLS };
+//module.exports = { abi, address, URLS };
