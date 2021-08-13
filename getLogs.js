@@ -61,11 +61,13 @@ async function rewardLogging(_from, _to) {
   const rewardLog = new Array();
 
   for (let reward of log) {
-    const log = [
-      web3.eth.abi.decodeParameter("address", reward.topics[1]),
-      web3.eth.abi.decodeParameter("address", reward.topics[2]),
-      unatomic(web3.eth.abi.decodeParameter("uint256", reward.topics[3]), 9),
-    ];
+    const log = {
+      user: web3.eth.abi.decodeParameter("address", reward.topics[1]),
+      leader: web3.eth.abi.decodeParameter("address", reward.topics[2]),
+      earn: Number(
+        unatomic(web3.eth.abi.decodeParameter("uint256", reward.topics[3]), 9)
+      ),
+    };
 
     rewardLog.push(log);
   }
@@ -73,7 +75,7 @@ async function rewardLogging(_from, _to) {
   return rewardLog;
 }
 
-async function getDailyrewards() {
+export async function getDailyrewards() {
   const end = daily + 8600;
 
   const fromBlock = await blockbytimestamp(daily);
@@ -84,7 +86,7 @@ async function getDailyrewards() {
   return dailyRewards;
 }
 
-async function getWeeklyrewards() {
+export async function getWeeklyrewards() {
   const end = weekly + 604800;
 
   const fromBlock = await blockbytimestamp(weekly);
@@ -95,10 +97,10 @@ async function getWeeklyrewards() {
   return weeklyRewards;
 }
 
-async function getMonthlyrewards() {
-  const end = weekly + 2629743;
+export async function getMonthlyrewards() {
+  const end = monthly + 2629743;
 
-  const fromBlock = await blockbytimestamp(weekly);
+  const fromBlock = await blockbytimestamp(monthly);
   const endBlock = await blockbytimestamp(end);
 
   const monthlyRewards = await rewardLogging(fromBlock, endBlock);
@@ -106,7 +108,7 @@ async function getMonthlyrewards() {
   return monthlyRewards;
 }
 
-async function getAllTimeRewards() {
+export async function getAllTimeRewards() {
   const fromBlock = "earliest";
   const endBlock = "latest";
 
@@ -115,12 +117,12 @@ async function getAllTimeRewards() {
   return alltimeRewards;
 }
 
-console.log({
-  DailyRewards: await getDailyrewards(),
-  WeeklyRewards: await getWeeklyrewards(),
-  MontlyRewards: await getMonthlyrewards(),
-  AllTimeRewards: await getAllTimeRewards(),
-});
+// console.log({
+//   DailyRewards: await getDailyrewards(),
+//   WeeklyRewards: await getWeeklyrewards(),
+//   MontlyRewards: await getMonthlyrewards(),
+//   AllTimeRewards: await getAllTimeRewards(),
+// });
 
 //array[0] = sender
 //array[1] = leader

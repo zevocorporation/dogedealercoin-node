@@ -2413,3 +2413,5 @@ const URLS = {
 };
 
 //module.exports = { abi, address, URLS };
+
+export { address, URLS };
