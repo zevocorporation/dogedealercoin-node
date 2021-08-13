@@ -1,9 +1,9 @@
 import fetch from "node-fetch";
 
 import Web3 from "web3";
-import { abi } from "./constants.js";
+import { abi, address } from "./constants.js";
 import { unatomic } from "./utils.js";
-const address = "0xccCa79107205433e743B0FCdcA8206171E07f059";
+//const address = "0xccCa79107205433e743B0FCdcA8206171E07f059";
 
 const web3 = new Web3(
   new Web3.providers.WebsocketProvider("wss://bsc-ws-node.nariox.org:443")

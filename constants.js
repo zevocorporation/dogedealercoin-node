@@ -2402,10 +2402,7 @@ export const abi = [
     type: "function",
   },
 ];
-const address = {
-  56: "0xccCa79107205433e743B0FCdcA8206171E07f059",
-  4: "0xFC8a93793D49E49AE02d96F2560c3F8680CF768A",
-};
+export const address = "0xccCa79107205433e743B0FCdcA8206171E07f059";
 
 const URLS = {
   56: "wss://bsc-ws-node.nariox.org:443",
