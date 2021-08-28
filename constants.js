@@ -1521,4 +1521,7 @@ const abi = [
   { stateMutability: "payable", type: "receive" },
 ];
 
-module.exports = { abi, address };
+const startBlock =
+  "0x87b6836641c18789b1f5e8e2c3f29e2747a39601f586690741501b3d571b115d";
+
+module.exports = { abi, address, startBlock };

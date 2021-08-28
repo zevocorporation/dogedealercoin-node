@@ -66,7 +66,7 @@ app.get("/getAll", async (req, res) => {
 app.get("/getReferrals/:id", async (req, res) => {
   const { id } = req.params;
   const result = await referrals(id);
-  console.log(result);
+  //console.log(result);
   res.status(201).json({ result });
 });
 
