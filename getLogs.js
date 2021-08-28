@@ -82,7 +82,7 @@ async function getAllTimeRewards() {
 
 async function referrals(_address) {
   const currentIteration = await DogeDealer.methods.getIterations().call();
-  const from = 0;
+  const from = getStartBlock("Monthly");
   const to = "latest";
   const topic0 = DogeDealer.events.ReferredBy().arguments[0].topics[0];
   const topic2 = web3.eth.abi.encodeParameter("address", _address);
@@ -114,7 +114,6 @@ async function referrals(_address) {
       ["uint256", "uint256", "uint256"],
       logs.data
     );
-
     if (currentIteration[1] === logData[0]) {
       DailyReferral++;
     }
